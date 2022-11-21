@@ -1,0 +1,70 @@
+/* Custom CSS goes here */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500&display=swap');
+
+body {
+  background-color: #3f5470 !important;
+  margin: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+/*title styling*/
+h1 {
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left:0;
+  bottom: 0;
+  text-align: center;
+  animation: fade-in 2s 1;
+  color: white;
+}
+/*animation keyframe with "fade in" name
+@keyframes fade-in {
+  100% {margin-bottom:150px; opacity:1.0}
+  0% {margin-bottom:75px; opacity:0.0}
+}
+*/
+
+.recipe-title {
+  font-family: 'Playfair Display', serif; 
+  position: relative;
+  top: 12%;
+  left: 0%;
+  animation: fade-in 2s 1;
+  color: white;
+}
+
+@keyframes fade {
+  100% {margin-top:0%; opacity:1.0}
+  0% {margin-top:100%; opacity:0.0}
+}
+
+/* Styles for projects page*/
+p2 {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  left: 3%;
+}
+/*animation for when page loads*/
+img { 
+  animation: fade 1s 1 !important;
+}
+
+.container-center { 
+  position:relative;
+  left: 25%;
+}
+
+.form-group{
+  font-family: 'Nunito', sans-serif;
+  color:white;
+}
+
+#start-button {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  padding: 18px; 
+}

@@ -1,0 +1,69 @@
+<%- include ../partials/header %>
+<%- include ../partials/main_nav %>
+<!--Content for the add page-->
+
+
+<div class="container-center">
+    <div class="row"> 
+        <div class="col-md-offset-3 col-md-6">
+            <h1 class="recipe-title"> <%= title %></h1> <br><br>
+            <form class="form" method="POST">
+                <!-- div for the "name"-->
+                <div class="form-group">
+                    <label for="nameTextField"> </label>
+                    <input type="text" class=form-control 
+                    id="nameTextField"
+                    placeholder="Enter the Recipe Name"
+                    name="name" required>
+                </div>
+
+                <!-- div for the "difficulty"-->
+                 <div class="form-group">
+                    <label for="difficultyTextField">  </label>
+                    <input type="text" class=form-control 
+                    id="difficultyTextField"
+                    placeholder="Enter the Difficulty"
+                    name="difficulty" required>
+                </div>
+
+                <!-- div for the "ingredients"-->
+                 <div class="form-group">
+                    <label for="ingredientsTextField">  </label>
+                    <input type="text" class=form-control 
+                    id="ingredientsTextField"
+                    placeholder="Enter the Ingredients"
+                    name="ingredients" required>
+                </div>
+                
+                <!-- div for the "time"-->
+                <div class="form-group">
+                    <label for="timeTextField">  </label>
+                    <input type="number" class=form-control 
+                    id="timeTextField"
+                    placeholder="Enter the Time to make "
+                    name="time" required>
+                </div>
+
+                <!-- div for the "price"-->
+                 <div class="form-group">
+                    <label for="priceTextField">  </label>
+                    <input type="number" class=form-control 
+                    id="priceTextField"
+                    placeholder="Enter the Price "
+                    name="price" required>
+                </div>
+                <br>
+                <!-- submit button with a background color of green-->
+                <button class="btn btn-primary" type="submit" style="background-color:green"> 
+                    <i class="fas fa-edit"> </i> Submit </a> 
+                </button>
+
+                <a href="/recipes" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel </a>
+            </form>
+
+        </div>
+    </div> 
+</div> 
+<%- include ../partials/bottom_nav %>
+<%- include ../partials/footer %>

@@ -1,0 +1,79 @@
+<%- include ../partials/header %>
+<%- include ../partials/main_nav %>
+<!--Content for the edit page-->
+
+<div class="container-center">
+    <div class="row"> 
+        <div class="col-md-offset-3 col-md-6">
+            <h1 class="recipe-title"> <%= title %></h1> <br><br>
+            <form class="form" method="POST">
+                <!-- div for the "name" but user can edit items as well-->
+                <div class="form-group">
+                    <label for="nameTextField"> Name </label>
+                    <input type="text" class=form-control 
+                    id="nameTextField"
+                    placeholder="Enter the Recipe NAme"
+                    name="name" 
+                    value = "<%= recipe.name %>"
+                    required>
+                </div>
+
+                <!-- div for the "text" but user can edit items as well-->
+                 <div class="form-group">
+                    <label for="difficultyTextField"> Difficulty </label>
+                    <input type="text" class=form-control 
+                    id="difficultyTextField"
+                    placeholder="Enter the Difficulty"
+                    name="difficulty" 
+                    value = "<%= recipe.difficulty %>"
+                    required>
+                </div>
+
+
+                 <!-- div for the "form" but user can edit items as well-->
+                 <div class="form-group">
+                    <label for="ingredientsTextField"> Ingredients </label>
+                    <input type="text" class=form-control 
+                    id="ingredientsTextField"
+                    placeholder="Enter the Ingredients"
+                    name="ingredients" 
+                    value = "<%= recipe.ingredients %>"
+                    required>
+                </div>
+
+                <!-- div for the "time" but user can edit items as well-->
+                <div class="form-group">
+                    <label for="timeTextField"> Time  </label>
+                    <input type="number" class=form-control 
+                    id="timeTextField"
+                    placeholder="Enter the Time to cook "
+                    name="time" 
+                    value = "<%= recipe.time %>"
+                    required>
+                </div>
+
+                <!-- div for the "price" but user can edit items as well-->
+                 <div class="form-group">
+                    <label for="priceTextField"> Price </label>
+                    <input type="number" class=form-control 
+                    id="priceTextField"
+                    placeholder="Enter the Price "
+                    name="price" 
+                    value = "<%= recipe.price %>"
+                    required>
+                </div>
+                <br>
+                <!-- green submit button-->
+                <button class="btn btn-primary" type="submit" style="background-color:green"> 
+                    <i class="fas fa-edit"> </i> Submit 
+                </button>
+
+                <a href="/recipes" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel </a>
+            </form>
+
+        </div>
+    </div> 
+</div> 
+<%- include ../partials/bottom_nav %>
+<%- include ../partials/footer %>
