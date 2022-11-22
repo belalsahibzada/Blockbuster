@@ -10,58 +10,59 @@
             <form class="form" method="POST">
                 <!-- div for the "name"-->
                 <div class="form-group">
-                    <label for="nameTextField"> </label>
+                    <label for="userTextField"> </label>
                     <input type="text" class=form-control 
-                    id="nameTextField"
-                    placeholder="Enter the Recipe Name"
-                    name="name" required>
+                    id="userTextField"
+                    placeholder="Enter the User Name"
+                    name="user" required>
                 </div>
 
                 <!-- div for the "difficulty"-->
                  <div class="form-group">
-                    <label for="difficultyTextField">  </label>
+                    <label for="subscriptionTierTextField">  </label>
                     <input type="text" class=form-control 
-                    id="difficultyTextField"
-                    placeholder="Enter the Difficulty"
-                    name="difficulty" required>
+                    id="subscriptionTierTextField"
+                    placeholder="Enter the Subscription Tier"
+                    name="subscriptionTier" required>
                 </div>
 
                 <!-- div for the "ingredients"-->
                  <div class="form-group">
-                    <label for="ingredientsTextField">  </label>
+                    <label for="movieNameTextField">  </label>
                     <input type="text" class=form-control 
-                    id="ingredientsTextField"
-                    placeholder="Enter the Ingredients"
-                    name="ingredients" required>
+                    id="movieNameTextField"
+                    placeholder="Enter the Movie Name"
+                    name="movieName" required>
                 </div>
                 
                 <!-- div for the "time"-->
                 <div class="form-group">
-                    <label for="timeTextField">  </label>
-                    <input type="number" class=form-control 
-                    id="timeTextField"
-                    placeholder="Enter the Time to make "
-                    name="time" required>
+                    <label for="rentDateTextField">  </label>
+                    <input type="text" class=form-control 
+                    id="rentDateTextField"
+                    placeholder="Enter the Date Rented"
+                    onfocus="(this.type='date')"
+                    name="rentDate" required>
                 </div>
 
                 <!-- div for the "price"-->
                  <div class="form-group">
-                    <label for="priceTextField">  </label>
+                    <label for="returnDateTextField"></label>
                     <input type="number" class=form-control 
-                    id="priceTextField"
-                    placeholder="Enter the Price "
-                    name="price" required>
+                    id="returnDateField"
+                    placeholder="Enter the Return Date"
+                    onfocus="(this.type='date')"
+                    name="returnDate" required>
                 </div>
                 <br>
                 <!-- submit button with a background color of green-->
                 <button class="btn btn-primary" type="submit" style="background-color:green"> 
-                    <i class="fas fa-edit"> </i> Submit </a> 
+                    <i class="fas fa-edit"></i> Submit </a> 
                 </button>
 
-                <a href="/recipes" class="btn btn-warning">
+                <a href="/blockbuster" class="btn btn-warning">
                     <i class="fas fa-undo"></i> Cancel </a>
             </form>
-
         </div>
     </div> 
 </div> 

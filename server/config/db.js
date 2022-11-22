@@ -1,5 +1,5 @@
 //URI link to connect to mongodb
 module.exports = 
 {
-    "URI" : "mongodb+srv://blockbuster:CMnSnRvLLFFsMBGZ@mongodbserver.5cddydp.mongodb.net/recipelist"
+    "URI" : "mongodb+srv://user:oOvjGNfobYwb3PbM@blockbuster.oybsoek.mongodb.net/Blockbuster"
 }

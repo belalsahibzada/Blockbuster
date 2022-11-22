@@ -9,7 +9,7 @@ let blockbusterController = require('../controller/blockbuster')
 /*CRUD Operation */
 // Read operation 
 // Get route for the book list 
-router.get('/',blockbusterController.displayRecipeList)
+router.get('/',blockbusterController.displayMovieList)
 
 /*Perform add operation  */
 /*Get route for displaying the ADD-Page -- Create Operation */

@@ -1,7 +1,7 @@
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#0b075a" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img src="/assets/images/logo.png" alt="Bootstrap" width="30" height="30"></a>
+    <a class="navbar-brand" href="/"> <img src="/assets/images/logo.png" alt ="blockbuster" width="45" height="30"></a>
           
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,8 +11,8 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-        <% if (title == "Home" )  { %>
-          <a class="nav-link active" aria-current="page" href="home">
+        <% if (title == "Home")  { %>
+          <a class="nav-link active" aria-current="page" href="home" style="color:#FFCC00">
         <% } else { %>
           <a class="nav-link" aria-current="page" href="/home">
         <% } %>
@@ -20,16 +20,13 @@
         </li>
 
         <li class="nav-item">
-        <% if (title ==  "Recipe List"  ) { %>
-          <a class="nav-link active" aria-current="page" href="/recipes"> 
+        <% if (title ==  "Rental List"  ) { %>
+          <a class="nav-link active" aria-current="page" href="/blockbuster" style="color:#FFCC00"> 
         <% } else { %>
-          <a class="nav-link" aria-current="page" href="/recipes"> 
+          <a class="nav-link" aria-current="page" href="/blockbuster" > 
         <% } %>
-          <i class="fa-solid fa-utensils"></i> Recipe List </a>
+          <i class="fa-solid fa-ticket"></i> Movie List </a>
         </li>
-
-       
-        
     </div>
   </div>
 </nav>

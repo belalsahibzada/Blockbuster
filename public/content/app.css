@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500&display=swap');
 
 body {
-  background-color: #3f5470 !important;
+  background-color: #0b075a  !important;
   margin: 0px;
   font-family: 'Playfair Display', serif;
 }
@@ -18,14 +18,8 @@ h1 {
   bottom: 0;
   text-align: center;
   animation: fade-in 2s 1;
-  color: white;
+  color: #FFCC00;
 }
-/*animation keyframe with "fade in" name
-@keyframes fade-in {
-  100% {margin-bottom:150px; opacity:1.0}
-  0% {margin-bottom:75px; opacity:0.0}
-}
-*/
 
 .recipe-title {
   font-family: 'Playfair Display', serif; 
@@ -33,7 +27,7 @@ h1 {
   top: 12%;
   left: 0%;
   animation: fade-in 2s 1;
-  color: white;
+  color: #FFCC00;
 }
 
 @keyframes fade {
@@ -41,12 +35,6 @@ h1 {
   0% {margin-top:100%; opacity:0.0}
 }
 
-/* Styles for projects page*/
-p2 {
-  font-family: 'Nunito', sans-serif;
-  position: relative;
-  left: 3%;
-}
 /*animation for when page loads*/
 img { 
   animation: fade 1s 1 !important;
@@ -67,4 +55,12 @@ img {
   top: 55%;
   left: 45%;
   padding: 18px; 
+}
+
+p {
+  background-color: #0b075a;
+}
+
+#navbarSupportedContent {
+  color:#FFCC00; 
 }

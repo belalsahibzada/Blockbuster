@@ -7,17 +7,17 @@ let blockbuster = require('../models/blockbuster')
 //controller for recipe page -> used to organize code
 
 //controller for displaying the recipes list
-module.exports.displayRecipeList = (req,res,next) => {
-    blockbuster.find((err,recipelist) => {
+module.exports.displayMovieList = (req,res,next) => {
+    blockbuster.find((err,movielist) => {
         if(err)
         {
             return console.error(err);
         }
         else 
         {
-            res.render('recipe/list',{
-                title : 'Recipe List', 
-                Recipelist : recipelist
+            res.render('movie/list',{
+                title : 'Rental List', 
+                MovieList : movielist
             })
         }
     });
@@ -25,43 +25,41 @@ module.exports.displayRecipeList = (req,res,next) => {
 
 //controller for displaying the add page
 module.exports.displayAddPage = (req,res,next) =>  {
-    res.render('recipe/add',{title:'Add Recipe'})
-
+    res.render('movie/add',{title:'Add Rental Movie'})
 };
 
 //controller for adding contents on add page
 module.exports.processAddPage = (req,res,next) =>  {
-    let newRecipe = blockbuster ({
-        "name" : req.body.name,
-        "difficulty" :req.body.difficulty,
-        "ingredients" : req.body.ingredients,
-        "time" : req.body.time,
-        "price":req.body.price
+    let newMovie = blockbuster ({
+        "user" : req.body.user,
+        "subscriptionTier" :req.body.subscriptionTier,
+        "movieName" : req.body.movieName,
+        "rentDate" : req.body.rentDate,
+        "returnDate":req.body.returnDate
     });
-    blockbuster.create(newRecipe,(err,Recipe) => {
+    blockbuster.create(newMovie,(err,Movie) => {
         if(err) { 
             console.log(err);
             res.end()
         }
         else 
         {
-            res.redirect('/recipes');
+            res.redirect('/blockbuster');
         }
-
     })
 };
 
 //controller for displaying edit page
 module.exports.displayEditPage = (req,res,next) =>  {
     let id = req.params.id;
-    blockbuster.findById(id,(err,recipeToEdit)=> {
+    blockbuster.findById(id,(err,movieToEdit)=> {
         if(err) { 
             console.log(err);
             res.end()
         }
         else 
         {
-            res.render('recipe/edit',{title:'Edit Recipe',recipe:recipeToEdit});
+            res.render('movie/edit',{title:'Edit Rental Movie',movie:movieToEdit});
         }
     })
 };
@@ -69,22 +67,21 @@ module.exports.displayEditPage = (req,res,next) =>  {
 //controller for processing the edit page
 module.exports.processEditPage = (req,res,next) =>  {
     let id = req.params.id;
-    let updateRecipe = blockbuster({
-        "_id":id,
-        "name" : req.body.name,
-        "difficulty" :req.body.difficulty,
-        "ingredients" : req.body.ingredients,
-        "time" : req.body.time,
-        "price":req.body.price
+    let updateMovie = blockbuster({
+        "user" : req.body.user,
+        "subscriptionTier" :req.body.subscriptionTier,
+        "movieName" : req.body.movieName,
+        "rentDate" : req.body.rentDate,
+        "returnDate":req.body.returnDate
     });
-    blockbuster.updateOne({_id:id},updateRecipe,(err)=> {
+    blockbuster.updateOne({_id:id},updateMovie,(err)=> {
         if(err) { 
             console.log(err);
             res.end()
         }
         else 
         {
-            res.redirect('/recipes');
+            res.redirect('/blockbuster');
         }
     })
 };
@@ -99,7 +96,7 @@ module.exports.performDeletePage = (req,res,next) =>  {
         }
         else 
         {
-            res.redirect('/recipes')
+            res.redirect('/blockbuster')
         }
     })
 };
