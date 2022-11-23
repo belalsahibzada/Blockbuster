@@ -32,7 +32,12 @@ h1{
 }
 
 #start-button {
-  
+  color: #0b075a !important;
+  text-align: center !important;
+}
+
+.fa-clapperboard{
+  color: #0b075a;
 }
 
 .listTitle {
