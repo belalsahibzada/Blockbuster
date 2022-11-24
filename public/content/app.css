@@ -21,7 +21,7 @@ body {
 }
 
 /*title styling*/
-h1{
+.homeTitle{
   font-family: 'Bebas Neue', serif;
   font-size: 110px !important;
   text-align: center !important;
@@ -41,11 +41,11 @@ h1{
 }
 
 .listTitle {
-  font-family: 'Playfair Display', serif; 
+  font-family: 'Oswald', serif; 
   position: relative;
   top: 12%;
-  left: 0%;
-  animation: fade-in 2s 1;
+  text-align: center;
+  animation: fade-in 1.5s 1;
   color: #FFCC00;
 }
 
@@ -78,7 +78,7 @@ p {
   
 @keyframes fadeIn {
   100% {margin-top:0%; opacity:1.0}
-  0% {margin-top:100%; opacity: 1.0}
+  0% {margin-top:4%; opacity: 0.0}
  
 }
   @keyframes fade {
