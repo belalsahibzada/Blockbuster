@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 48px !important;
-  animation: fadeIn 2s 1;
+  animation: fadeIn 1.5s 1;
 }
 
 /*title styling*/
@@ -27,7 +27,7 @@ body {
   text-align: center !important;
   margin-top: 10% !important;
   /*padding: auto !important;*/
-  animation: fade-in 2s 1;
+  animation: fadeIn 1.5s 1;
   color: #FFCC00;
 }
 
@@ -51,7 +51,7 @@ body {
 
 /*animation for when page loads*/
 img { 
-  animation: fade 1s 1 !important;
+  animation: fadeIn-Img 1s 1 !important;
 }
 
 .container-center { 
@@ -74,14 +74,18 @@ p {
   color:#FFCC00; 
 }
 
-
   
 @keyframes fadeIn {
   100% {margin-top:0%; opacity:1.0}
-  0% {margin-top:4%; opacity: 0.0}
- 
+  0% {margin-top:1.6%; opacity: 0.0}
 }
-  @keyframes fade {
-    0% {margin-top:0%; opacity:1.0}
-    0% {margin-top:100%; opacity:0.0}
-  }
+  
+@keyframes fadeIn-Img {
+  100% {margin-top:0%; opacity:1.0}
+  0% {margin-top:50%; opacity: 0.0}
+}
+
+@keyframes fade {
+  0% {margin-top:0%; opacity:1.0}
+  0% {margin-top:100%; opacity:0.0}
+}

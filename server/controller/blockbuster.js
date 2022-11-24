@@ -59,7 +59,7 @@ module.exports.displayEditPage = (req,res,next) =>  {
         }
         else 
         {
-            res.render('movie/edit',{title:'Edit Rental Movie',movie:movieToEdit});
+            res.render('movie/edit',{title:'Edit Rental Movie',MovieList:movieToEdit});
         }
     })
 };
