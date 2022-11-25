@@ -3,76 +3,75 @@
 <!--Content for the edit page-->
 
 <div class="container"> 
-        <div class="col-md-offset-3 col-md-6"> 
-            <h1 class="listTitle"> <%= title %></h1> <br><br>
-            <form class="form" method="POST">
-                <!-- div for the "name" but user can edit items as well-->
-                <div class="form-group">
-                    <label for="userTextField"> User </label>
-                    <input type="text" class=form-control 
-                    id="userTextField"
-                    placeholder="Enter the User Name"
-                    name="user" 
-                    value = "<%= MovieList.user %>"
-                    required>
-                </div>
+    <div class="col-md-offset-3 col-md-6"> 
+        <h1 class="listTitle"> <%= title %></h1> <br><br>
+        <form class="form" method="post">
+            <!-- div for the "name" but user can edit items as well-->
+            <div class="form-group">
+                <label for="userTextField"> User </label>
+                <input type="text" class="form-control"
+                id="userTextField"
+                placeholder="Enter the User Name"
+                name="user" 
+                value = "<%= MovieList.user %>"
+                required>
+            </div>
 
-                <!-- div for the "text" but user can edit items as well-->
-                 <div class="form-group">
-                    <label for="subscriptionTierTextField"> Subscription Tier </label>
-                    <input type="text" class=form-control 
-                    id="subscriptionTierTextField"
-                    placeholder="Enter the Subscription Tier"
-                    name="subscriptionTier" 
-                    value = "<%= MovieList.subscriptionTier %>"
-                    required>
-                </div>
+            <!-- div for the "text" but user can edit items as well-->
+            <div class="form-group">
+                <label for="subscriptionTierTextField"> Subscription Tier </label>
+                <input type="text" class="form-control"
+                id="subscriptionTierTextField"
+                placeholder="Enter the Subscription Tier"
+                name="subscriptionTier" 
+                value = "<%= MovieList.subscriptionTier %>"
+                required>
+            </div>
 
 
-                 <!-- div for the "form" but user can edit items as well-->
-                 <div class="form-group">
-                    <label for="movieNameTextField"> Movie Name </label>
-                    <input type="text" class=form-control 
-                    id="movieNameTextField"
-                    placeholder="Enter the movieName"
-                    name="movieName" 
-                    value = "<%= MovieList.movieName %>"
-                    required>
-                </div>
+            <!-- div for the "form" but user can edit items as well-->
+            <div class="form-group">
+                <label for="movieNameTextField"> Movie Name </label>
+                <input type="text" class="form-control"
+                id="movieNameTextField"
+                placeholder="Enter the movieName"
+                name="movieName" 
+                value = "<%= MovieList.movieName %>"
+                required>
+            </div>
 
-                <!-- div for the "time" but user can edit items as well-->
-                <div class="form-group">
-                    <label for="rentDateTextField"> Rent Date  </label>
-                    <input type="text" class=form-control 
-                    id="rentDateTextField"
-                    placeholder="Enter the Time to cook "
-                    onfocus="(this.type='date')"
-                    name="rentDate" 
-                    value = "<%= MovieList.rentDate %>"
-                    required>
-                </div>
+            <!-- div for the "time" but user can edit items as well-->
+            <div class="form-group">
+                <label for="rentDateTextField"> Rent Date  </label>
+                <input type="text" class="form-control"
+                id="rentDateTextField"
+                placeholder="Enter the rental date"
+                onfocus="(this.type='date')"
+                name="rentDate" 
+                value = "<%= MovieList.rentDate %>"
+                required>
+            </div>
 
-                <!-- div for the "price" but user can edit items as well-->
-                 <div class="form-group">
-                    <label for="returnDateTextField"> Return Date </label>
-                    <input type="text" class=form-control 
-                    id="returnDateTextField"
-                    placeholder="Enter the returnDate "
-                    onfocus="(this.type='date')"
-                    name="Return Date" 
-                    value = "<%= MovieList.returnDate %>"
-                    required>
-                </div>
-                <br>
-                <!-- green submit button-->
-                <button class="btn btn-primary" type="submit" style="background-color:green"> 
-                    <i class="fas fa-edit"> </i> Submit 
-                </button>
+            <!-- div for the "price" but user can edit items as well-->
+            <div class="form-group">
+                <label for="returnDateTextField"> Return Date </label>
+                <input type="text" class="form-control" 
+                id="returnDateTextField"
+                placeholder="Enter the returnDate "
+                onfocus="(this.type='date')"
+                name="returnDate" 
+                value = "<%= MovieList.returnDate %>"
+                required>
+            </div>
+            <br>
+            <!-- green submit button-->
+            <button class="btn" type="submit" style="background-color:green"> 
+                <i class="fas fa-edit"></i> Apply Changes</button>
 
-                <a href="/blockbuster" class="btn btn-warning">
-                    <i class="fas fa-undo"></i> Cancel </a>
-            </form>
-        </div>
+            <a href="/blockbuster" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel </a>
+        </form>
+    </div>
 </div> 
 <%- include ../partials/bottom_nav %>
 <%- include ../partials/footer %>

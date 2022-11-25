@@ -68,6 +68,7 @@ module.exports.displayEditPage = (req,res,next) =>  {
 module.exports.processEditPage = (req,res,next) =>  {
     let id = req.params.id;
     let updateMovie = blockbuster({
+        "_id":id,
         "user" : req.body.user,
         "subscriptionTier" :req.body.subscriptionTier,
         "movieName" : req.body.movieName,
