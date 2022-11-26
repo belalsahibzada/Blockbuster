@@ -1,5 +1,5 @@
-<%- include ../partials/header %>
-<%- include ../partials/main_nav %>
+<%- include ("../partials/header") %>
+<%- include ("../partials/main_nav") %>
 <!--Content for the edit page-->
 
 <div class="containerCenter"> 
@@ -20,12 +20,17 @@
             <!-- div for the "text" but user can edit items as well-->
             <div class="form-group">
                 <label for="subscriptionTierTextField"> Subscription Tier </label>
-                <input type="text" class="form-control"
+                <select class="form-control"
                 id="subscriptionTierTextField"
                 placeholder="Enter the Subscription Tier"
                 name="subscriptionTier" 
                 value = "<%= MovieList.subscriptionTier %>"
                 required>
+                        <option value="<%= MovieList.subscriptionTier %>"selected hidden><%= MovieList.subscriptionTier %></option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Premium+">Premium+</option>
+                </select>
             </div>
 
 
@@ -73,5 +78,5 @@
         </form>
     </div>
 </div> 
-<%- include ../partials/bottom_nav %>
-<%- include ../partials/footer %>
+<%- include ("../partials/bottom_nav") %>
+<%- include ("../partials/footer") %>

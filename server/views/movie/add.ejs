@@ -1,5 +1,5 @@
-<%- include ../partials/header %>
-<%- include ../partials/main_nav %>
+<%- include ("../partials/header") %>
+<%- include ("../partials/main_nav") %>
 <!--Content for the add page-->
 
 <div class="containerCenter">
@@ -18,10 +18,15 @@
                 <!-- div for the "difficulty"-->
                  <div class="form-group">
                     <label for="subscriptionTierTextField">  </label>
-                    <input type="text" class=form-control 
+                    <select class=form-control 
                     id="subscriptionTierTextField"
                     placeholder="Enter the Subscription Tier (Standard, Premium, Premium+)"
                     name="subscriptionTier" required>
+                        <option value="" disabled selected hidden>Select the Subscription Tier</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Premium+">Premium+</option>
+                    </select>
                 </div>
 
                 <!-- div for the "ingredients"-->
@@ -63,5 +68,5 @@
             </form>
         </div>
     </div> 
-<%- include ../partials/bottom_nav %>
-<%- include ../partials/footer %>
+<%- include ("../partials/bottom_nav") %>
+<%- include ("../partials/footer") %>
