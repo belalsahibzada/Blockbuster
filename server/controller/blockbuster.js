@@ -1,7 +1,6 @@
 let express = require('express')
 let router = express.Router();
 let mongoose = require('mongoose');
-
 let blockbuster = require('../models/blockbuster')
 
 //controller for recipe page -> used to organize code
@@ -17,7 +16,8 @@ module.exports.displayMovieList = (req,res,next) => {
         {
             res.render('movie/list',{
                 title : 'Rental List', 
-                MovieList : movielist
+                MovieList : movielist,
+                username: req.user ? req.user.username:''
             })
         }
     });
@@ -25,7 +25,8 @@ module.exports.displayMovieList = (req,res,next) => {
 
 //controller for displaying the add page
 module.exports.displayAddPage = (req,res,next) =>  {
-    res.render('movie/add',{title:'Add Rental Movie'})
+    res.render('movie/add',{title:'Add Rental Movie',
+    username: req.user ? req.user.username:''})
 };
 
 //controller for adding contents on add page
@@ -59,7 +60,8 @@ module.exports.displayEditPage = (req,res,next) =>  {
         }
         else 
         {
-            res.render('movie/edit',{title:'Edit Rental Movie',MovieList:movieToEdit});
+            res.render('movie/edit',{title:'Edit Rental Movie',MovieList:movieToEdit,
+            username: req.user ? req.user.username:''});
         }
     })
 };
