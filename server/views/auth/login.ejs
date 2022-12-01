@@ -9,13 +9,12 @@
     </div>
     <% } %>
 
-    <div class="row">
-        <div class="offset-md-4 col-md-4">
+        <div class="loginPage">
             <h1 class="loginTitle">Please Login</h1>
             <form method="post" autocomplete="off">
                 <fieldset class="form-group">
                     <label for="username"></label>
-                    <input type="text" class="form-control"
+                    <input type="text" class="form-control formBox"
                     name="username" 
                     placeholder="Enter username"
                     id="username" required autofocus>
@@ -26,10 +25,10 @@
                     name="password" 
                     placeholder="Enter password"
                     id="password" required>
-                    or
-                    <a href="/register">Register Here</a>
                 </fieldset>
-                <fieldset class="form-group text-right">
+                <fieldset class="form-group">
+                    <br />or
+                    <a href="/register">Register Here</a><br />
                     <button type="submit" class="btn btn-success" value="Login" style="color:black">
                         <i class="fa-solid fa-right-to-bracket"></i> Login</button>
                     <a href="/"></a>
@@ -39,7 +38,6 @@
                 </fieldset>
             </form>
         </div>
-    </div>
 </main>
 
 <%- include ("../partials/bottom_nav") %>
