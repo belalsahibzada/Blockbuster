@@ -92,11 +92,32 @@ img {
   flex-direction: column;
 }
 
+.loginPage{
+  flex-direction: column !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  max-width: 500px !important;
+  margin: auto !important;
+  margin-top: 10% !important;
+  /* transform: translateY(-50%) !important; */
+}
+.loginPage .formBox{
+  width: 100% !important;
+}
+
+.loginPage .form-group{
+  gap: 40px !important;
+}
+
 /*"Please login" on login page*/
 .loginTitle{
   color: #FFCC00 !important;
   font-family: 'Bebas Neue', serif !important;
+  text-align: center !important;
 }
+
+
 
 
 
