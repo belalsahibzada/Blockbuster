@@ -10,7 +10,7 @@
             if(!confirm("Are you sure? "))
             {
                 event.preventDefault()
-                window.location.assign('/recipes')
+                window.location.assign('/blockbuster')
             }
         });
 

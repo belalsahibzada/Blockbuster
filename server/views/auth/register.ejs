@@ -1,5 +1,5 @@
-<%- include ../partials/header %>
-<%- include ../partials/main_nav %>
+<%- include ("../partials/header") %>
+<%- include ("../partials/main_nav") %>
 <main class="container">
     <!--Message Area-->
     <% if (message.lenth > 0) { %>
@@ -10,7 +10,7 @@
 
     <div class="row">
         <div class="offset-md-4 col-md-4">
-            <h1>Please Register</h1>
+            <h1 class="listTitle">Please Register</h1>
             <form method="post" autocomplete="off">
                 <fieldset class="form-group">
                     <label for="username"></label>
@@ -41,10 +41,10 @@
                     id="displayName" required>
                 </fieldset>
                 <fieldset class="form-group text-right">
-                    <input type="submit" class="btn btn-success"
-                    value="Register">
+                    <button type="submit" class="btn btn-success" value="Register" style="color:black"> 
+                        <i class="fa-solid fa-user-plus"></i> Register</button>
                     <a href="/"></a>
-                        <input type="button" class="btn btn-warning" value="Cancel">
+                        <input type="button" class="fas fa-undo" value="Cancel" style="background-color:red">
                     </a>
                 </fieldset>
             </form>
@@ -52,5 +52,5 @@
     </div>
 </main>
 
-<%- include ../partials/bottom_nav %>
-<%- include ../partials/footer %>
+<%- include ("../partials/bottom_nav") %>
+<%- include ("../partials/footer") %>
