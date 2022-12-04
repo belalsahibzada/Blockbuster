@@ -8,9 +8,9 @@
     </div>
     <% } %>
 
-    <div class="row">
-        <div class="offset-md-4 col-md-4">
-            <h1 class="listTitle">Please Register</h1>
+
+        <div class="loginPage">
+            <h1 class="listTitle"> Please Register </h1>
             <form method="post" autocomplete="off">
                 <fieldset class="form-group">
                     <label for="username"></label>
@@ -39,13 +39,12 @@
                     name="displayName" 
                     placeholder="Enter display name"
                     id="displayName" required>
-                </fieldset>
+                </fieldset><br>
                 <fieldset class="form-group text-right">
                     <button type="submit" class="btn btn-success" value="Register" style="color:black"> 
                         <i class="fa-solid fa-user-plus"></i> Register</button>
-                    <a href="/"></a>
-                        <input type="button" class="fas fa-undo" value="Cancel" style="background-color:red">
-                    </a>
+                    <a href="/" class="btn btn-warning" style="background-color:red">
+                        <i class="fas fa-undo"></i> Cancel </a>
                 </fieldset>
             </form>
         </div>
