@@ -117,6 +117,17 @@ img {
   text-align: center !important;
 }
 
+.registerPage{
+  flex-direction: column !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  max-width: 500px !important;
+  margin: auto !important;
+  margin-top: 5% !important;
+  /* transform: translateY(-50%) !important; */
+}
+
 
 
 
