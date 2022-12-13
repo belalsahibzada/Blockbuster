@@ -1,12 +1,15 @@
-/* Custom CSS goes here */
-
 /*Imported Custom Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&display=swap');
 body {
   background-color: #0b075a  !important;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Bebas Neue', serif;
+}
+
+/*Button on navbar*/
+#navbarSupportedContent {
+  color:#FFCC00; 
 }
 
 /*_____________________HOME PAGE*___________________/
@@ -36,11 +39,10 @@ body {
 #start-button {
   color: #0b075a !important;
   text-align: center !important;
+  border:1px solid #0b075a !important;
 }
-
-/*Clapper board icon in get started button*/
-.fa-clapperboard{
-  color: #0b075a;
+#start-button:hover{
+  color: white !important;
 }
 
 /*animation for when page loads*/
@@ -63,35 +65,8 @@ img {
 
 
 
-
-
-
-/*Form fields for login, register, add, edit*/
-.form-group{
-  font-family: 'Nunito', sans-serif;
-  color:white;
-}
-
-
-
-
-/*Button on navbar*/
-#navbarSupportedContent {
-  color:#FFCC00; 
-}
-
-  
-
-/*Container for add and edit page forms*/
-.containerCenter{
-  position: center !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 60px !important;
-  flex-direction: column;
-}
-
+/*_________________________Login Page_______________________________*/
+/*Formatting for login form*/
 .loginPage{
   flex-direction: column !important;
   position: relative !important;
@@ -105,18 +80,57 @@ img {
 .loginPage .formBox{
   width: 100% !important;
 }
-
 .loginPage .form-group{
   gap: 40px !important;
 }
 
-/*"Please login" on login page*/
+/*Title for login page*/
 .loginTitle{
   color: #FFCC00 !important;
   font-family: 'Bebas Neue', serif !important;
   text-align: center !important;
 }
 
+/*Register link for login page*/
+.loginPage a.registerlink{
+  font-weight: bolder !important;
+  color: #FFCC00;
+}
+.loginPage a.registerlink:hover
+{
+  color: white !important;
+}
+
+/*Styling for login button & also register button on register page*/
+.loginbtn{
+  margin-top: 20px !important;
+  color: #0b075a !important;
+  border-color: #0b075a !important;
+}
+.loginbtn:hover{
+  color: white !important;
+  border:1px solid #0b075a !important;
+  border-color: #0b075a !important;
+}
+
+/*Styling for cancle button on login & register page*/
+.cancelbtn{
+  margin-top: 20px !important;
+  color: rgb(255, 255, 255) !important;
+  border:1px solid red !important;
+  width: 100px !important;
+}
+.cancelbtn:hover{
+  background-color: red !important;
+  border:1px solid red !important;
+}
+/*________________________________________________________________________*/
+
+
+
+
+/*___________________Registration Page_____________________________________*/
+/*Formatting for registration form*/
 .registerPage{
   flex-direction: column !important;
   position: relative !important;
@@ -127,31 +141,97 @@ img {
   margin-top: 5% !important;
   /* transform: translateY(-50%) !important; */
 }
+/*________________________________________________________________________*/
+
+
+/*________________________Rental List_______________________*/
+/*Styling for table*/
+tr{
+  color: #FFCC00 !important;
+}
+td{
+  color: #FFCC00 !important;
+  text-align: center !important;
+  height: 50px !important;
+  vertical-align: middle !important;
+  font-size: 17px !important;
+}
+th{
+  font-size: larger !important;
+}
+table, th, td{
+  border-color: #FFCC00!important;
+}
+
+/*Container for add and edit page forms*/
+.containerCenter{
+  position: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 60px !important;
+  flex-direction: column;
+}
+
+/*Form fields for login, register, add, edit*/
+.form-group{
+  font-family: 'Nunito', sans-serif;
+  color:white;
+}
+
+/*Styling for Submit button*/
+.fa-submitbtn{
+  width: 100px !important;
+  color: #0b075a !important;
+}
+.fa-submitbtn:hover{
+  color: white !important;
+  border:1px solid #0b075a !important;
+  border-color: #0b075a !important;
+}
+
+/*Styling for rent a movie*/
+.fa-addbtn{
+  color: #0b075a !important;
+  border:1px solid #0b075a !important;
+}
+.fa-addbtn:hover{
+  color: white !important;
+}
+
+/*Styling for delete button*/
+.fa-delete2{
+  color: rgb(255, 255, 255) !important;
+  border:1px solid red !important;
+  width: 100px !important;
+}
+.fa-delete2:hover{
+  background-color: red !important;
+  border:1px solid red !important;
+}
+
+/*Styling for edit button*/
+.fa-edit2{
+  width: 100px !important;
+  color: rgb(255, 255, 255) !important;
+  border:1px solid #0b075a !important;
+}
+.fa-edit2:hover{
+  color: #0b075a !important;
+  border:1px solid rgb(255, 255, 255) !important;
+  border-color: #0b075a !important;
+}
+/*_______________________________________________________________*/
 
 
 
 
-
-
-
-/*Formating for list for...........................................................................*/
+/*Formatting for Titles*/
 .listTitle {
-  font-family: 'Oswald', serif; 
+  font-family: 'Bebas Neue', serif;
   position: relative;
   top: 12%;
   text-align: center;
   animation: fade-in 1.5s 1;
   color: #FFCC00;
-}
-
-
-/*Not sure if we need this......................................*/
-.container-center { 
-  position:relative;
-  left: 25%;
-}
-
-/*Not sure if we need this......................................*/
-p {
-  background-color: #0b075a;
 }
