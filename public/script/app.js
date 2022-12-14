@@ -3,7 +3,7 @@
     {
         console.log("App Started")
 
-        let deleteButtons = document.querySelectorAll('.btn-danger')
+        let deleteButtons = document.querySelectorAll('.fa-delete2')
     for(button of deleteButtons)
     {
         button.addEventListener('click',(event)=>{

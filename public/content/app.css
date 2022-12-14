@@ -57,9 +57,10 @@ img {
   100% {margin-top:0%; opacity:1.0}
   0% {margin-top:50%; opacity: 0.0}
 }
-@keyframes fade {
-  0% {margin-top:0%; opacity:1.0}
-  0% {margin-top:100%; opacity:0.0}
+@keyframes opacityFade {
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  100% {opacity: 1;}
 }
 /*_____________________________________________________________*/
 
@@ -161,6 +162,12 @@ th{
 }
 table, th, td{
   border-color: #FFCC00!important;
+}
+#signupPrompt { 
+  font-family: 'Bebas Neue', serif;
+  animation: opacityFade 3s 1;
+  color: #FFCC00;
+  font-size: larger;
 }
 
 /*Container for add and edit page forms*/
