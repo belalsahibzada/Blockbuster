@@ -190,11 +190,12 @@ table, th, td{
 .fa-submitbtn{
   width: 100px !important;
   color: #0b075a !important;
+  border-color: #0b075a !important;
+
 }
 .fa-submitbtn:hover{
   color: white !important;
   border:1px solid #0b075a !important;
-  border-color: #0b075a !important;
 }
 
 /*Styling for rent a movie*/
